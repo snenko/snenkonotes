@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ua-UK">
+<head>
+<meta charset="UTF-8">
+<title></title>
+
+<link rel="stylesheet" type="text/css" href="/css/main.css"/>
+<?php echo $this->headLink(); ?>
+<?php echo $this->headScript(); ?>
+<?php
+    Zend_Dojo::enableView($this);
+    $this->dojo()->setCdnBase(Zend_Dojo::CDN_BASE_AOL)->addStyleSheetModule('dijit.themes.tundra');
+    echo $this->dojo();
+?>
+</head>
+<body>
+<div id="page">
+
+<div id="menu">
+    <?php echo $this->navigation()->menu(); ?>
+</div>
+
+<div id="content">
+    <?php echo $this->layout()->content; ?>
+</div>
+
+<div id="footer"></div>
+
+</div>
+</body>
+</html>

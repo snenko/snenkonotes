@@ -1,0 +1,95 @@
+body{
+    background-color: #ffffff;
+    /* font-size: 12px; */
+}
+
+#page{max-width: 800px; margin: auto}
+#content{}
+#menu{}
+#footer{}
+#view-content{}
+#view-content #notes{}
+
+.row-marksblock-head{
+    vertical-align: middle;
+}
+
+.row{
+    border-bottom: 1px dashed gray;
+    padding: 9px 0 0px 0px;
+}
+.row-marksblock{}
+
+.markstyle{
+    border: 1px solid #6C6C6C;
+    display: inline-block;
+    padding: 1px 5px 1px 5px;
+    margin: 0 1px 0 1px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.head{}
+.id{}
+.mask{float: right;font-size: 10px;}
+.comment{float: right;font-size: 10px;}
+.note{
+    padding: 2px 2px 2px 4px;
+    border-radius: 2px;
+    border: 1px solid #6C6C6C;
+    /*background-color: rgb(242, 242, 242);*/
+    background-color: khaki;
+}
+
+.use_rating{
+    /*color: #000;*/
+    /*background-color: #dcdcdc;*/
+    border: 0 solid #6C6C6C;
+}
+
+.updated{
+    color: gray;
+    font-size: 9px;
+    padding: 1px 0px 0px 1px;
+}
+
+.smallbutton{
+    font-size: 10px;
+    vertical-align: middle;
+    border: 1px solid #000;
+    display: inline-block;
+    padding: 0px 2px 0px 2px;
+    border-radius: 2px;
+    /*background-color: #dcdcdc;*/
+    margin-top: -2px;
+}
+
+#locale img{
+    border: 1px solid gray;
+}
+
+#locale {
+
+    padding-right: 10px;
+    padding-top: 10px;
+}
+
+ul.navigation li{
+    display: inline;
+}
+
+ul.navigation li a{
+    text-decoration: none;
+}
+
+#menu li.active a {
+    color: gray;
+    font-size: 12pt;
+    border: solid 1px gray;
+    text-decoration: none;
+}
+
+.notes-form {
+    border: 1px dashed gray;
+    padding: 5px;
+}

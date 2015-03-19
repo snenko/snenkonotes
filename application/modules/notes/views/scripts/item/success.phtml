@@ -1,0 +1,16 @@
+<div id="view-content">
+    <h2>Успіх.</h2>
+    <?php echo implode($this->messages); ?>
+    <?php echo $this->translate('Refresh-three-sec') ?> Через 3 секунди Вас буде перекинуто на
+    <a href="<?php echo $this->url(array(), 'notes'); ?>">
+        <?php
+        $notes = $this->navigation()->findOneByLabel('Notes');
+        $options = array('indent'  => 16,'ulClass' => 'notes');
+        echo $this->navigation()->menu()->renderMenu($notes, $options);
+        ?>
+    </a>
+
+
+    <?php header( 'Refresh: 5; url='.$this->url(array(), 'notes') ); ?>
+
+</div>

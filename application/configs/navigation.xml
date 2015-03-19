@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+
+<home>
+    <label>Home</label>
+    <uri>/home</uri>
+</home>
+<notes>
+    <label>Notes</label>
+    <uri>/notes/item/index</uri>
+</notes>
+
+</config>
