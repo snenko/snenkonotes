@@ -1,0 +1,27 @@
+<?php IF($this->escape($r['note'])): ?>
+
+<div class="row">
+    <div class="row-marksblock-head">
+        <div class="cell markstyle use_rating">
+            <?php echo $this->escape($r['use_rating']) ?>
+            <span class="smallbutton">копіювати</span>
+        </div>
+        <?php IF($this->escape($r['mask'])): ?>
+            <div class="cell markstyle mask"><?php echo $this->escape($r['mask']) ?></div>
+        <?php ENDIF; ?>
+
+        <?php IF($this->escape($r['comment'])): ?>
+            <div class="cell markstyle comment"><?php echo $this->escape($r['notes-item-comment']) ?></div>
+        <?php ENDIF; ?>
+    </div>
+    <div class="cell note"><?php echo $this->escape($r['note']) ?></div>
+    <div class="row-marksblock-footer">
+        <?php
+            $date = new Zend_Date($this->escape($r['updated']));
+            //$date->setLocale('uk_UA');
+        ?>
+        <div class="cell updated"><?php echo $date; ?></div>
+    </div>
+</div>
+
+<?php ENDIF; ?>

@@ -43,7 +43,7 @@ class ErrorController extends Zend_Controller_Action
 			'stacktrace' => 'Stack',
 			'request' => 'Request',
 		);
-		$dbWriter = new Snenkonotes_Log_Writer_Doctrine('Mynotes_Model_Log', $columnMap);
+		$dbWriter = new Snenkonotes_Log_Writer_Doctrine('Snenkonotes_Model_Log', $columnMap);
 		$logger->addWriter($dbWriter);
 
 		// add Firebug writer

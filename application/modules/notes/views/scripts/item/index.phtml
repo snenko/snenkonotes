@@ -1,16 +1,5 @@
 <div id="view-content">
-
-    <div id="ajaxBlock" style ="border: 2px aqua solid;width: 200px;">блок для данных</div>
-
-    <a href="#" onclick="getAjaxData(); return false;">получить данные</a>
-    <br><br>
-
-    <input type="text" value="Введите имя" id="fieldName" />
-    <a href="#" onclick="getAjaxDataJson(); return false;">получить данные json</a>
-
-    <h1>Нотатки</h1>
-
-    <?php include('/forms/note-form-create.phtml'); ?>
+    <h1><?php echo $this->translate('notes') ?></h1>
 
     <?php if (count($this->records)): ?>
 
@@ -27,5 +16,7 @@
         <p>Відсутні записи</p>
 
     <?php endif; ?>
+
+    <?php include('/forms/item-form-create.phtml'); ?>
 
 </div>

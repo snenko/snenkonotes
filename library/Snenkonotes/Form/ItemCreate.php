@@ -14,7 +14,7 @@ class Snenkonotes_Form_ItemCreate extends Zend_Dojo_Form //Zend_Form//
         'plugins'=>
             array(/*'undo','redo', 'selectAll', 'subscript','superscript', '|',*/
                   'foreColor', 'hiliteColor', '|',
-                  'cut','copy','paste','|',
+                  //'cut','copy','paste','|',
                   'bold','italic','underline','strikethrough','|',
                   'insertOrderedList', 'insertUnorderedList','|',
                   'removeFormat','insertHorizontalRule', 'createLink', '|',
@@ -51,7 +51,7 @@ class Snenkonotes_Form_ItemCreate extends Zend_Dojo_Form //Zend_Form//
 			/*->addValidator('Alpha')*/;
 
         // At instantiation:
-        $note = new Zend_Dojo_Form_Element_Editor('foo','note');
+        $note = new Zend_Dojo_Form_Element_Editor('note');
         $note->setOptions($this->options_notes)
             ->setRequired(true)
             ->addValidator('NotEmpty', true, array('messages' => array('isEmpty' => 'Поле не може бути пустим.')));;
@@ -66,7 +66,7 @@ class Snenkonotes_Form_ItemCreate extends Zend_Dojo_Form //Zend_Form//
 			->addElement($note)
 			->addElement($submit);
 
-        $this->addDisplayGroup(array('mask', 'comment',), 'priority');
+        $this->addDisplayGroup(array('mask', 'comment','note', 'submit'), 'priority');
         $this->getDisplayGroup('priority')
             ->setOrder(20)
             ->setLegend('form-item-create-priority-legend');

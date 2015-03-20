@@ -19,7 +19,7 @@ class Notes_ItemController extends Zend_Controller_Action
         $result = $q->fetchArray();
         $this->view->records = $result;
 
-        $form = new Snenkonotes_Form_NotesCreate();
+        $form = new Snenkonotes_Form_ItemCreate();
         $this->view->form = $form;
     }
 
