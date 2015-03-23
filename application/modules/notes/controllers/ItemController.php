@@ -10,9 +10,6 @@ class Notes_ItemController extends Zend_Controller_Action
 
     public function indexAction()
     {
-        $this->view->headScript()->appendFile('http://code.jquery.com/jquery-latest.min.js');
-        $this->view->headScript()->appendFile('/js/main.js');
-
         // action body
         $q = Doctrine_Query::create()
             ->from('Snenkonotes_Model_Notes i');
@@ -30,7 +27,7 @@ class Notes_ItemController extends Zend_Controller_Action
 
         if ($this->getRequest()->isPost()) {
             if ($form->isValid($this->getRequest()->getPost())) {
-                $item = new Snenkonotes_Form_ItemCreate();
+                $item = new Snenkonotes_Model_Notes;
                 $item->fromArray($form->getValues());
 
                 try {

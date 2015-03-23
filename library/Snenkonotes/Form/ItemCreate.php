@@ -1,6 +1,6 @@
 <?php
 
-class Snenkonotes_Form_ItemCreate extends Zend_Dojo_Form //Zend_Form//
+class Snenkonotes_Form_ItemCreate extends /*Zend_Dojo_Form*/ Zend_Form
 {
     private $options_notes = array(
         'degrade' => true,
@@ -39,22 +39,29 @@ class Snenkonotes_Form_ItemCreate extends Zend_Dojo_Form //Zend_Form//
 		$mask->setLabel('notes-item-mask')
 			->addFilter('HtmlEntities')
 			->addFilter('StringTrim')
-			->setOptions(array('size' => '60'))
+			/*->setOptions(array('cols'=>'100%'))*/
 			/*->addValidator('Alpha')*/;
 
 		$comment = new Zend_Form_Element_Text('comment');
 		$comment->setLabel('notes-item-comments')
 			->addFilter('HtmlEntities')
 			->addFilter('StringTrim')
-            ->setOptions(array('size' =>  '60'))
 			/*->setOptions(array('size' => '255', 'width'=>'100%'))*/
 			/*->addValidator('Alpha')*/;
 
         // At instantiation:
+        $note = new Zend_Form_Element_Textarea('note');
+        //$note->setOptions(array('size' => '60', 'min-height' => '100px'))
+        //$note->setOptions(array('size' => '255', 'width'=>'100%'))
+        $note->setOptions(array('rows'=>'2', 'cols'=>'100%'))
+            ->setRequired(true)
+            ->addValidator('NotEmpty', true, array('messages' => array('isEmpty' => 'Поле не може бути пустим.')));;
+        /*
         $note = new Zend_Dojo_Form_Element_Editor('note');
         $note->setOptions($this->options_notes)
             ->setRequired(true)
             ->addValidator('NotEmpty', true, array('messages' => array('isEmpty' => 'Поле не може бути пустим.')));;
+        */
 
 		$submit = new Zend_Form_Element_Submit('submit');
 		$submit->setLabel('submit')
