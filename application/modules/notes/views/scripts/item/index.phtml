@@ -17,6 +17,9 @@
 
     <?php endif; ?>
 
-    <?php include('/forms/item-form-create.phtml'); ?>
+    <div class="item-form">
+        <h3><?php echo $this->translate('notes-item-create') ?></h3>
+        <?php echo $this->form; ?>
+    </div>
 
 </div>

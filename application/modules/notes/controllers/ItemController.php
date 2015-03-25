@@ -32,12 +32,12 @@ class Notes_ItemController extends Zend_Controller_Action
 
                 try {
                     $item->save();
-                } catch(Exception $e){
+                } catch (Exception $e) {
                     echo $e->getMessage();
                 }
 
-                $id = $item->id;//$id = $item->RecordID;
-                $this->_helper->getHelper('FlashMessenger')->addMessage('Ваш запис був добавлений пунктом #' . $id );
+                $id = $item->id; //$id = $item->RecordID;
+                $this->_helper->getHelper('FlashMessenger')->addMessage('Ваш запис був добавлений пунктом #' . $id);
                 $this->_redirect('/notes/item/success');
             }
         }
@@ -51,8 +51,6 @@ class Notes_ItemController extends Zend_Controller_Action
             $this->_redirect('/');
         }
     }
-
-
 }
 
 
